@@ -1,0 +1,15 @@
+POST http://localhost:3333/
+Content-Type: application/json
+
+{
+  "name": "Ferreira",
+  "email": "ferreira@gmail.com",
+  "password": "qwe123"
+}
+
+
+###
+GET http://localhost:3333/
+
+###
+GET http://localhost:3333/ad5d5004-a326-4061-8e9b-1f3b1f75a64a
