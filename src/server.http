@@ -2,8 +2,8 @@ POST http://localhost:3333/
 Content-Type: application/json
 
 {
-  "name": "Ferreira",
-  "email": "ferreira@gmail.com",
+  "name": "João",
+  "email": "joao@gmail.com",
   "password": "qwe123"
 }
 
@@ -12,4 +12,32 @@ Content-Type: application/json
 GET http://localhost:3333/
 
 ###
-GET http://localhost:3333/ad5d5004-a326-4061-8e9b-1f3b1f75a64a
+GET http://localhost:3333/52f15167-d452-4e29-ab04-bd018d81829a
+
+
+###
+POST http://localhost:3333/login
+Content-Type: application/json
+
+{
+  "email": "ferreira@gmail.com",
+  "password" : "qwe123"
+}
+
+###
+@token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZlcnJlaXJhQGdtYWlsLmNvbSIsImlhdCI6MTcyNjUzMTcwMiwiZXhwIjoxNzI2NjE4MTAyLCJzdWIiOiJhZDVkNTAwNC1hMzI2LTQwNjEtOGU5Yi0xZjNiMWY3NWE2NGEifQ.K0LlNXd20O41x-gHpCUt0_B7O0URP9zDKjqd1j-ZrdI'
+
+POST http://localhost:3333/task
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "teste 2",
+  "description" : "teste 2",
+  "status" : false
+}
+
+###
+GET  http://localhost:3333/task?offset=1&limit=5
+Authorization: Bearer {{token}}
+
